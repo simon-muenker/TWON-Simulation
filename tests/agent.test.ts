@@ -1,19 +1,31 @@
-import {Agent} from '../src/modules';
+import { Agent } from "../src";
+import type { Feed, ThreadItem, Notifcation } from "../src/util/common";
+
+
+const TOPIC = "JavaScript";
+const DISCUSSION = `Post: I really like ${TOPIC}\n\nReply: I agree!`;
+
 
 class TestAgent extends Agent {
-  getFeed(): Array<Object> {
+  getNotifications(): Array<Notifcation> {
     return [];
   }
-  getHistory(): Array<Object> {
+  getFeed(): Feed {
+    return [];
+  }
+  getHistory(): Array<ThreadItem> {
     return [];
   }
 }
 
 const testAgent = new TestAgent();
 
-test('Agent writing post', async () => {
-  const topic = 'JavaScript';
+test("Agent writing post", async () => {
+  const post = await testAgent.writePost(TOPIC);
+  expect(post).toContain(TOPIC);
+}, 60 * 1000);
 
-  const post = await testAgent.writePost(topic);
-  expect(post).resolves.toContain(topic);
-});
+test("Agent writing reply", async () => {
+  const reply = await testAgent.writeReply(DISCUSSION);
+  expect(reply).toContain(TOPIC);
+}, 60 * 1000);

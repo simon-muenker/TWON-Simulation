@@ -1,4 +1,4 @@
-import {activation} from '../src/common';
+import { activation } from "../src/util/common";
 
 // describe('Activation', () => {
 //   test.each([
