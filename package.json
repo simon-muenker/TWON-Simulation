@@ -15,8 +15,8 @@
   "scripts": {
     "compile": "tsc",
     "test": "jest test",
-    "lint": "eslint src/**/*.ts",
-    "format": "prettier --write src/**/*.ts"
+    "lint": "eslint src/**/*.ts --fix",
+    "prettier": "prettier --write src/**/*.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
