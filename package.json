@@ -1,6 +1,6 @@
 {
   "name": "twon-actor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "todo",
   "keywords": ["", ""],
   "homepage": "https://github.com/simon-muenker/TWON-Actor",
@@ -12,8 +12,9 @@
   "license": "Apache-2.0",
   "files": ["dist"],
   "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "compile": "tsc",
+    "build": "tsc",
     "test": "jest test",
     "lint": "eslint src/**/*.ts --fix",
     "prettier": "prettier --write src/**/*.ts"
