@@ -1,5 +1,5 @@
-import { Agent } from "./agent.ts";
-import { Network } from "./network.ts";
-import * as textual from "./textual/index.ts";
+import { Agent } from "./agent.js";
+import { Network } from "./network.js";
+import * as textual from "./textual/index.js";
 
 export { Agent, Network, textual };

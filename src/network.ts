@@ -1,4 +1,4 @@
-import { Agent } from "./agent.ts";
+import { Agent } from "./agent.js";
 
 export class Network {
   private agents: Map<number, Agent>;
