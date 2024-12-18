@@ -46,12 +46,6 @@ export abstract class Agent {
   abstract getFeed(): Array<Thread>;
 
   /**
-   * Gets the agent's history.
-   * @returns {Array<HistoryItem>} The agent's history.
-   */
-  abstract getHistory(): Array<HistoryItem>;
-
-  /**
    * Gets the agent's notifications.
    * @returns {Array<Notification>} The agent's notifications.
    */

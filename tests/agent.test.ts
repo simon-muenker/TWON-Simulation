@@ -13,9 +13,6 @@ class TestAgent extends Agent {
   getFeed(): Array<Thread> {
     return [];
   }
-  getHistory(): Array<HistoryItem> {
-    return [];
-  }
 }
 
 // create a dummy agent
