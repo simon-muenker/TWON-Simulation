@@ -1,9 +1,5 @@
 # TWON-Actor
 
-[![npm package][npm-img]][npm-url]
-[![Downloads][downloads-img]][downloads-url]
-[![Issues][issues-img]][issues-url]
-
 ## Install
 
 ```bash
