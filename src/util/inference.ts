@@ -1,4 +1,4 @@
-import axios, { type AxiosInstance } from "axios"
+import axios, { type AxiosInstance } from "axios";
 
 /**
  * A chat item represents a single message in a conversation.
@@ -6,9 +6,9 @@ import axios, { type AxiosInstance } from "axios"
  * @property {string} role The role of the message sender.
  */
 export type ChatItem = {
-    content: string
-    role: string
-}
+  content: string;
+  role: string;
+};
 
 /**
  * A chat result represents the result of the chat API call.
@@ -19,25 +19,25 @@ export type ChatItem = {
  * @property {string} response The response of the model.
  */
 export type ChatResult = {
-    id: string
-    timestamp: string
-    model: string
-    chat: Array<ChatItem>
-    response: string
-}
+  id: string;
+  timestamp: string;
+  model: string;
+  chat: Array<ChatItem>;
+  response: string;
+};
 
 /**
  * The API instance.
  */
 const API: AxiosInstance = axios.create({
-    // base URL of the API
-    baseURL: "https://inf.cl.uni-trier.de",
-    // request headers
-    headers: {
-        "Content-Type": "application/json; charset=UTF-8",
-        "Access-Control-Allow-Origin": "*",
-    },
-})
+  // base URL of the API
+  baseURL: "https://inf.cl.uni-trier.de",
+  // request headers
+  headers: {
+    "Content-Type": "application/json; charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+  },
+});
 
 /**
  * Start a chat inference with the model.
@@ -46,22 +46,22 @@ const API: AxiosInstance = axios.create({
  * @returns {Promise<ChatResult>} The result of the conversation.
  */
 export async function chat(
-    model: string,
-    messages: Array<ChatItem>
+  model: string,
+  messages: Array<ChatItem>,
 ): Promise<ChatResult> {
-    // Send a POST request to the API to start the conversation
-    return await API.post("/chat/", {
-        model: model,
-        messages: messages,
+  // Send a POST request to the API to start the conversation
+  return await API.post("/chat/", {
+    model: model,
+    messages: messages,
+  })
+    .then((result) => {
+      // log and return the result
+      // console.debug(result)
+      return result.data;
     })
-        .then((result) => {
-            // log and return the result
-            // console.debug(result)
-            return result.data
-        })
-        .catch((error) => {
-            // log and rethrow the error
-            console.error(error)
-            throw error
-        })
+    .catch((error) => {
+      // log and rethrow the error
+      console.error(error);
+      throw error;
+    });
 }

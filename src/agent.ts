@@ -1,12 +1,11 @@
-import type { Thread, Notification, HistoryItem } from "./types.js";
+import type { HistoryItem, Notification, Thread } from "./types.js";
 import { AGENT_DEFAULTS } from "./constants.js";
 
 import { chat, type ChatItem } from "./util/inference.js";
 import { instructions } from "./textual/instructions.js";
 
-
 /**
- * An agent is a simulated user that can interact with the network. 
+ * An agent is a simulated user that can interact with the network.
  * It has a label, a model, an instruction, and a history of actions.
  * The agent can get its feed, history, and notifications.
  * The agent can also perform actions like reading, posting, and replying.
@@ -70,7 +69,10 @@ export abstract class Agent {
    */
   public selectAction(): CallableFunction {
     // TODO random sampling with weights for action
-    return this.getActions()[Object.keys(this.getActions())[0] as string] as CallableFunction;
+    return this
+      .getActions()[
+        Object.keys(this.getActions())[0] as string
+      ] as CallableFunction;
   }
 
   /**
@@ -96,7 +98,7 @@ export abstract class Agent {
   public read(message: string): void {
     this.history.push({
       type: "read",
-      stimulus: message
+      stimulus: message,
     });
     this.updateActionBudget("read");
   }
@@ -150,7 +152,7 @@ export abstract class Agent {
     // process notifications
     for (const notification of this.getNotifications()) {
       // selection action
-     const action: CallableFunction = this.selectAction();
+      const action: CallableFunction = this.selectAction();
 
       // perform action
       action(notification.threadItem.message);
@@ -159,10 +161,10 @@ export abstract class Agent {
     // process feed
     for (const thread of this.getFeed()) {
       // selection action
-     const action: CallableFunction = this.selectAction();
+      const action: CallableFunction = this.selectAction();
 
-     // perform action
-     action(thread.post.message);
+      // perform action
+      action(thread.post.message);
     }
   }
 

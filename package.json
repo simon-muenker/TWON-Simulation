@@ -1,12 +1,12 @@
 {
-  "name": "twon-actor",
+  "name": "twon-simulation",
   "version": "1.0.1",
   "description": "todo",
   "keywords": ["", ""],
-  "homepage": "https://github.com/simon-muenker/TWON-Actor",
+  "homepage": "https://github.com/simon-muenker/TWON-Simulation",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simon-muenker/TWON-Actor.git"
+    "url": "git+https://github.com/simon-muenker/TWON-Simulation.git"
   },
   "author": "Simon Muenker <simon.muenker@googlemail.com> (http://simon-muenker.github.io)",
   "license": "Apache-2.0",

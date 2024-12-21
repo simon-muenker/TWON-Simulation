@@ -1,5 +1,5 @@
 import { Agent } from "../src";
-import type { Notification, Thread, HistoryItem  } from "../src/types";
+import type { HistoryItem, Notification, Thread } from "../src/types";
 
 // fixtures
 const TOPIC = "JavaScript";

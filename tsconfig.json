@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* Strictness */
-    "strict": true, 
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
@@ -24,8 +24,8 @@
     /* library and repo */
     "declarationMap": true,
     "declaration": true,
-    "lib": ["es2022"],
+    "lib": ["es2022"]
   },
   "exclude": ["node_modules", "**/*.test.ts"],
-  "include": ["src"],
+  "include": ["src"]
 }
