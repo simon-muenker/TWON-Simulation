@@ -2,7 +2,10 @@
   "name": "twon-simulation",
   "version": "1.0.4",
   "description": "todo",
-  "keywords": ["", ""],
+  "keywords": [
+    "",
+    ""
+  ],
   "homepage": "https://github.com/simon-muenker/TWON-Simulation",
   "repository": {
     "type": "git",
@@ -10,28 +13,26 @@
   },
   "author": "Simon Muenker <simon.muenker@googlemail.com> (http://simon-muenker.github.io)",
   "license": "Apache-2.0",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest test",
-    "lint": "eslint src/**/*.ts --fix",
-    "prettier": "prettier --write src/**/*.ts"
+    "lint": "deno lint",
+    "format": "deno fmt"
   },
   "devDependencies": {
-    "@eslint/js": "^9.16.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.7.5",
-    "eslint": "^9.16.0",
     "globals": "^15.13.0",
     "jest": "^29.7.0",
     "jest-cli": "^29.7.0",
-    "prettier": "3.4.2",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.17.0"
+    "typescript": "^5.6.3"
   },
   "dependencies": {
     "axios": "^1.7.8"
