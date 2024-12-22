@@ -1,4 +1,4 @@
-import axios, { type AxiosInstance } from "axios";
+import axios, { type AxiosInstance } from "npm:axios";
 
 /**
  * A chat item represents a single message in a conversation.

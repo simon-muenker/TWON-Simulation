@@ -1,4 +1,4 @@
-import { activation } from "../src/util/common";
+import type { activation as _activation } from "../src/util/common.ts";
 
 // describe('Activation', () => {
 //   test.each([

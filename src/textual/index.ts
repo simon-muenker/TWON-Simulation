@@ -1,4 +1,4 @@
-import { instructions } from "./instructions.js";
-import { personas } from "./personas.js";
+import { instructions } from "./instructions.ts";
+import { personas } from "./personas.ts";
 
 export { instructions, personas };

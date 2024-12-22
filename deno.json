@@ -1,0 +1,22 @@
+{
+  "name": "@twon/simulation",
+  "version": "1.0.6",
+  "description": "The TWON-Simulation package",
+  "author": "Simon Muenker <simon.muenker@googlemail.com> (http://simon-muenker.github.io)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon-muenker/TWON-Simulation.git"
+  },
+  "exports": "./src/index.ts",
+  "tasks": {
+    "test": "deno test --allow-env --allow-net",
+    "check": "deno fmt && deno lint",
+    "build": "deno run -A scripts/build_npm.ts",
+    "publish": "cd dist && npm publish"
+  },
+  "imports": {
+    "@axios": "npm:axios@^1.7.9",
+    "@deno/dnt": "jsr:@deno/dnt@^0.41.3"
+  }
+}

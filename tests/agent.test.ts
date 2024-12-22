@@ -1,5 +1,7 @@
-import { Agent } from "../src";
-import type { HistoryItem, Notification, Thread } from "../src/types";
+import { expect } from "jsr:@std/expect";
+
+import { Agent } from "../src/index.ts";
+import type { Notification, Thread } from "../src/types.ts";
 
 // fixtures
 const TOPIC = "JavaScript";
@@ -19,21 +21,21 @@ class TestAgent extends Agent {
 const testAgent = new TestAgent("test");
 
 // test that the agent can write a post
-test("Agent writing post", async () => {
+Deno.test("Agent writing post", async () => {
   // write a post (inference API call)
   const post = await testAgent.post(TOPIC);
   // expect the post to contain the topic
   expect(post).toContain(TOPIC);
   // log the agent
   console.log(testAgent);
-}, 60 * 1000);
+});
 
 // Test that the agent can write a reply
-test("Agent writing reply", async () => {
+Deno.test("Agent writing reply", async () => {
   // reply to a discussion (inference API call)
   const reply = await testAgent.reply(DISCUSSION);
   // expect the reply to contain the topic
   expect(reply).toContain(TOPIC);
   // log the agent
   console.log(testAgent);
-}, 60 * 1000);
+});

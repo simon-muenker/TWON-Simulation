@@ -1,8 +1,8 @@
-import type { HistoryItem, Notification, Thread } from "./types.js";
-import { AGENT_DEFAULTS } from "./constants.js";
+import type { HistoryItem, Notification, Thread } from "./types.ts";
+import { AGENT_DEFAULTS } from "./constants.ts";
 
-import { chat, type ChatItem } from "./util/inference.js";
-import { instructions } from "./textual/instructions.js";
+import { chat, type ChatItem } from "./util/inference.ts";
+import { instructions } from "./textual/instructions.ts";
 
 /**
  * An agent is a simulated user that can interact with the network.
