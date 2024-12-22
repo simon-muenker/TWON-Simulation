@@ -1,7 +1,7 @@
 import { expect } from "jsr:@std/expect";
 
-import { Agent } from "../src/index.ts";
-import type { Notification, Thread } from "../src/types.ts";
+import { Agent } from "./index.ts";
+import type { Notification, Thread } from "./types.ts";
 
 // fixtures
 const TOPIC = "JavaScript";
