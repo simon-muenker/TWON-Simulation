@@ -1,4 +1,4 @@
-import type { ChatItem } from "../util/inference.ts";
+import type { ChatItem } from "../lib/inference.ts";
 
 export const instructions: {
   post: ChatItem;

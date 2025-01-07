@@ -1,7 +1,7 @@
-import type { HistoryItem, Notification, Thread } from "./types.ts";
-import { AGENT_DEFAULTS } from "./constants.ts";
+import type { HistoryItem, Notification, Thread } from "./_types.ts";
+import { AGENT_DEFAULTS } from "./_constants.ts";
 
-import { chat, type ChatItem } from "./util/inference.ts";
+import { chat, type ChatItem } from "./lib/inference.ts";
 import { instructions } from "./textual/instructions.ts";
 
 /**
@@ -10,7 +10,7 @@ import { instructions } from "./textual/instructions.ts";
  * The agent can get its feed, history, and notifications.
  * The agent can also perform actions like reading, posting, and replying.
  */
-export abstract class Agent {
+export default abstract class Agent {
   public label: string | number;
   public model: string;
   public instruction: string;

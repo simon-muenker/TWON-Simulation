@@ -6,7 +6,7 @@ export const AGENT_DEFAULTS: {
   model: string;
   // default instruction/persona
   instruction: string;
-  // default action budgetq
+  // default action budget
   actionBudget: number;
   // default cost of each action in terms of action points.
   actionCosts: Record<string, number>;

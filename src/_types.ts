@@ -20,12 +20,12 @@ export type ThreadItem = {
 /**
  * A thread is a collection of post and comments.
  * @property {ThreadItem} post The post of the thread.
- * @property {Array<ThreadItem>} reply The comments of the thread.
+ * @property {Array<ThreadItem>} replies The comments of the thread.
  * @property {number} ranking The ranking of the thread.
  */
 export type Thread = {
   post: ThreadItem;
-  reply?: Array<ThreadItem>;
+  replies?: Array<ThreadItem>;
   ranking?: number;
 };
 

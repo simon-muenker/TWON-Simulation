@@ -1,17 +1,11 @@
-import type { Agent } from "./agent.ts";
+import type Agent from "./agent.ts";
 
-export class Network {
+export default class Network {
   private agents: Map<number, Agent>;
-  private network: Map<number, number>;
-
-  private time: number;
+  private connections: Map<number, number>;
 
   constructor() {
     this.agents = new Map();
-    this.network = new Map();
-
-    this.time = Date.now();
+    this.connections = new Map();
   }
-
-  public run(): void {}
 }

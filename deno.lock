@@ -26,7 +26,9 @@
     "jsr:@ts-morph/bootstrap@0.24": "0.24.0",
     "jsr:@ts-morph/common@0.24": "0.24.0",
     "npm:axios@*": "1.7.9",
-    "npm:axios@^1.7.9": "1.7.9"
+    "npm:axios@^1.7.9": "1.7.9",
+    "npm:lodash@^4.17.21": "4.17.21",
+    "npm:nanostores@~0.11.3": "0.11.3"
   },
   "jsr": {
     "@david/code-block-writer@13.0.3": {
@@ -173,6 +175,9 @@
         "mime-types"
       ]
     },
+    "lodash@4.17.21": {
+      "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
+    },
     "mime-db@1.52.0": {
       "integrity": "sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg=="
     },
@@ -182,6 +187,9 @@
         "mime-db"
       ]
     },
+    "nanostores@0.11.3": {
+      "integrity": "sha512-TUes3xKIX33re4QzdxwZ6tdbodjmn3tWXCEc1uokiEmo14sI1EaGYNs2k3bU2pyyGNmBqFGAVl6jAGWd06AVIg=="
+    },
     "proxy-from-env@1.1.0": {
       "integrity": "sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg=="
     }
@@ -189,7 +197,9 @@
   "workspace": {
     "dependencies": [
       "jsr:@deno/dnt@~0.41.3",
-      "npm:axios@^1.7.9"
+      "npm:axios@^1.7.9",
+      "npm:lodash@^4.17.21",
+      "npm:nanostores@~0.11.3"
     ]
   }
 }
